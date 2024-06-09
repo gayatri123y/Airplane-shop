@@ -1,0 +1,148 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_rename": 1,
+ "autoname": "format:{Shop}-{####}",
+ "creation": "2024-04-21 22:29:14.335516",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "shop_information_section",
+  "shop_id",
+  "shop_owner",
+  "status",
+  "column_break_eoet",
+  "shop_type",
+  "area",
+  "airport",
+  "contact_details_section",
+  "email_address",
+  "mobile_number",
+  "column_break_oxgk",
+  "owner_address",
+  "route",
+  "published"
+ ],
+ "fields": [
+  {
+   "fieldname": "area",
+   "fieldtype": "Float",
+   "label": "Area (In sqft)"
+  },
+  {
+   "fieldname": "shop_owner",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Owner",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "On Lease\nAvailable for  lease\nUnder construction",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop_information_section",
+   "fieldtype": "Section Break",
+   "label": "Shop Information"
+  },
+  {
+   "fieldname": "shop_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Shop Type",
+   "options": "Food and Beverage\nRetail Stores\nSpeciality Shops\nTravel and Transport\nBookstores and Newsstands\nGift Shops\nElectronic Stores"
+  },
+  {
+   "fieldname": "column_break_eoet",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "label": "Airport",
+   "options": "Airport",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Details"
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Mobile Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_oxgk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "owner_address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Owner Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
+  },
+  {
+   "fieldname": "shop_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop ID",
+   "reqd": 1
+  }
+ ],
+ "has_web_view": 1,
+ "index_web_pages_for_search": 1,
+ "is_published_field": "published",
+ "links": [],
+ "modified": "2024-05-16 23:12:43.692103",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Shop",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "shopinfo",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

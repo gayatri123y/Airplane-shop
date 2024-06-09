@@ -1,0 +1,185 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{lease_agreement_id}{###}",
+ "creation": "2024-04-21 23:15:15.042161",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "lease_agreement_id",
+  "shop",
+  "shop_owner",
+  "owner_contact",
+  "tenant",
+  "tenant_contact",
+  "contract_document",
+  "column_break_hqqn",
+  "airport",
+  "lease_start_date",
+  "lease_end_date",
+  "rent_amount",
+  "total_rent",
+  "payment_method",
+  "status",
+  "route",
+  "terms_and_conditions",
+  "is_published",
+  "amended_from",
+  "shop_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tenant",
+   "options": "Tenant Information",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shop Id",
+   "options": "Shop"
+  },
+  {
+   "fieldname": "lease_agreement_id",
+   "fieldtype": "Data",
+   "label": "Lease Agreement Id",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "shop.shop_owner",
+   "fieldname": "shop_owner",
+   "fieldtype": "Data",
+   "label": "Shop Owner"
+  },
+  {
+   "fetch_from": "shop.mobile_number",
+   "fieldname": "owner_contact",
+   "fieldtype": "Data",
+   "label": "Owner Contact",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "tenant.contact_number",
+   "fieldname": "tenant_contact",
+   "fieldtype": "Data",
+   "label": "Tenant Contact"
+  },
+  {
+   "fieldname": "contract_document",
+   "fieldtype": "Attach",
+   "label": "Contract Document"
+  },
+  {
+   "fieldname": "column_break_hqqn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "label": "Airport",
+   "options": "Airport"
+  },
+  {
+   "fieldname": "lease_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Lease Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lease_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Lease End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_rent",
+   "fieldtype": "Currency",
+   "label": "Total Rent"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Payment Method",
+   "options": "Cash\nCredit Card\nBank Transfers\nMobile Payment\nDigital wallet",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "On Lease\nAvailable for lease\nUnder construction"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "terms_and_conditions",
+   "fieldtype": "Check",
+   "label": "Terms and Conditions"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Shop Lease Agreement",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rent Amount"
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Link",
+   "label": "Shop Name",
+   "options": "Shop"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-05-15 11:56:33.960643",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Shop Lease Agreement",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

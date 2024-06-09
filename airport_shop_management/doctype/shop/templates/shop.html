@@ -1,0 +1,21 @@
+
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h1>{{ doc.name |e }}</h1>
+<h3>{{ _("Shop Details") }}</h3>
+<div>
+    <b>{{ _("Shop Owner") }}</b>: {{ doc.shop_owner }}<br>
+    <!-- <b>{{ _("Shop ID") }}</b>: {{ doc.shop_id }}</p> -->
+    <b>{{ _("Shop Type") }}</b>: {{ doc.shop_type }}<br>
+    <!-- <b>{{ _("Status") }}</b>: {{ doc.status }}<br> -->
+    <b>{{ _("Area (In sqft)") }}</b>: {{ doc.area }}<br>
+    <b>{{ _("Airport") }}</b>: {{ doc.airport }}</br>
+    <b>{{ _("Email Address") }}</b>: {{ doc.email_address }}<br>
+    <b>{{ _("Mobile Number") }}</b>: {{ doc.mobile_number }}<br>
+    
+    <a class="btn btn-primary btn-md" href="http://gayatri.airline:8000/shop-booking/new">
+        {{ _("Book a Shop") }}
+    </a>
+</div>
+{% endblock %} 

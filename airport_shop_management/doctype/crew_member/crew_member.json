@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{CREW}-{###}",
+ "creation": "2024-04-21 23:56:16.395702",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_information_section",
+  "crewmember_id",
+  "full_name",
+  "status",
+  "contact_details_section",
+  "address",
+  "column_break_amsr",
+  "mobile_number",
+  "job_title"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Phone",
+   "label": "Mobile Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "personal_information_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Information"
+  },
+  {
+   "fieldname": "crewmember_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "CrewMember ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nOn Leave\nRetired",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Details"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "column_break_amsr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "job_title",
+   "fieldtype": "Select",
+   "label": "Job Title",
+   "options": "Pilot\nCo-pilot\nCabin-Crew\nFlight Attendance\nFlight Engineer",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-04-26 21:17:10.242920",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Crew Member",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

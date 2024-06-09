@@ -1,0 +1,58 @@
+{
+ "add_total_row": 0,
+ "columns": [
+  {
+   "fieldname": "airport",
+   "fieldtype": "Data",
+   "label": "Airport",
+   "width": 0
+  },
+  {
+   "fieldname": "under_construction",
+   "fieldtype": "Data",
+   "label": "Under construction",
+   "width": 0
+  },
+  {
+   "fieldname": "on_lease",
+   "fieldtype": "Data",
+   "label": "On Lease",
+   "width": 0
+  },
+  {
+   "fieldname": "available_for_lease",
+   "fieldtype": "Data",
+   "label": "Available for lease",
+   "width": 0
+  },
+  {
+   "fieldname": "total_shops",
+   "fieldtype": "Data",
+   "label": "Total Shops",
+   "width": 0
+  }
+ ],
+ "creation": "2024-04-28 00:52:15.401702",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2024-05-15 12:12:39.171092",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Shop Lease Status",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \n    airport, \n    SUM(CASE WHEN status = 'On Lease' THEN 1 ELSE 0 END) as lease_count,\n    SUM(CASE WHEN status = 'Available for lease' THEN 1 ELSE 0 END) as available_for_lease_count,\n    SUM(CASE WHEN status = 'Under construction' THEN 1 ELSE 0 END) as under_construction_Count,\n    COUNT(*) AS total_shops\nFROM\n    tabShop\nGROUP BY\n    airport;",
+ "ref_doctype": "Shop Lease Agreement",
+ "report_name": "Shop Lease Status",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}
